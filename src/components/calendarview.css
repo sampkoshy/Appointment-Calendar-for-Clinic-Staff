@@ -1,0 +1,140 @@
+/* Container */
+.calendar-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.calendar-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Day headers */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  background: #6192f5;
+  color: #333;
+  padding: 10px 0;
+  border-radius: 6px;
+}
+
+/* Calendar cells */
+.cell {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 8px;
+  min-height: 100px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.cell:hover {
+  background-color: #eef7ff;
+}
+
+.cell-date {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* Appointment pill style */
+.appt {
+  background-color: #d1eaff;
+  color: #004085;
+  border-left: 4px solid #007bff;
+  font-size: 13px;
+  padding: 4px 6px;
+  margin-top: 4px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.appt:hover {
+  background-color: #b9dcff;
+}
+
+/* Past dates */
+.past-date {
+  background-color: #d41919e5;
+  color: #999;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Empty cell */
+.cell.empty {
+  background-color: transparent;
+  border: none;
+}
+
+/* Responsive tweaks */
+/* 📱 Mobile View - Below 768px */
+@media (max-width: 768px) {
+  .calendar-grid {
+    display: none; /* hide month grid */
+  }
+
+  .calendar-container {
+    padding: 16px;
+  }
+
+  .calendar-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+
+  .date-picker {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .mobile-day-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-day-box .cell-date {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .appt {
+    font-size: 14px;
+    margin-top: 6px;
+    padding: 5px 7px;
+  }
+}
