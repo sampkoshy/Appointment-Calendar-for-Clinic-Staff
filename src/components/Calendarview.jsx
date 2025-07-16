@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./CalendarView.css";
 import AppointmentForm from "./AppointmentForm";
 
-const CalendarView = () => {
+const Calendarview = () => {
   const today = new Date();
   const [editAppointment, setEditAppointment] = useState(null);
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
@@ -174,4 +174,4 @@ const CalendarView = () => {
   );
 };
 
-export default CalendarView;
+export default Calendarview;
