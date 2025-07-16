@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
-import Calenderview from "./components/Calendarview";
+import CalendarView from "./components/Calendarview"; // ✅ matched correctly
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/Calendarview" element={<Calenderview/>} />
+      <Route path="/CalendarView" element={<CalendarView />} /> {/* ✅ corrected */}
     </Routes>
   );
 };
