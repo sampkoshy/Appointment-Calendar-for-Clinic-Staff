@@ -15,7 +15,7 @@ const Login = () => {
     const validPassword = "123456";
 
     if (email === validEmail && password === validPassword) {
-      navigate("/calendar");
+      navigate("/CalendarView");
     } else {
       setError("Invalid email or password");
     }
