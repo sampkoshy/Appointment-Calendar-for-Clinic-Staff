@@ -5,12 +5,13 @@ import AppointmentForm from "./AppointmentForm";
 const CalendarView = () => {
   const today = new Date();
   const [editAppointment, setEditAppointment] = useState(null);
-  const [currentMonth, setCurrentMonth] = useState(today.getMonth());
-  const [currentYear, setCurrentYear] = useState(today.getFullYear());
   const [selectedDate, setSelectedDate] = useState(null);
   const [appointments, setAppointments] = useState([]);
   const [showForm, setShowForm] = useState(false);
-
+  const currentMonth = today.getMonth();    
+  const currentYear = today.getFullYear();   
+  
+  
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [mobileDate, setMobileDate] = useState(today.toISOString().split("T")[0]);
 
@@ -93,7 +94,7 @@ const CalendarView = () => {
 
   const renderMobileView = () => {
     const selected = new Date(mobileDate);
-    const dateStr = selected.toDateString();
+    // const dateStr = selected.toDateString();
     const day = selected.getDate();
     const appointmentsForDay = getAppointmentsForDay(day);
 
